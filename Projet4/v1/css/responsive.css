@@ -1,0 +1,313 @@
+@media screen and (max-width: 1596px) {
+
+    /* Homepage */
+
+    .homepageBlockLeft {
+        height: 620px;
+    }
+
+    .homepageWhoAmI {
+        height: 450px;
+    }
+
+    .homepageWhoAmIBlock img {
+        width: 160px;
+    }
+
+    .homepageSocialNetworksBlock {
+        width: 80%;
+    }
+
+    .homepageSocialNetworks {
+        height: 150px;
+    }
+
+    .homepageSocialNetworksBlock a {
+        width: 40px;
+    }
+
+    /* Chapitres */
+
+    .articleImg {
+        width: 30%;
+    }
+
+    .articleImg img {
+        width: auto;
+        height: 100%;
+    }
+
+    .articleDscBlock {
+        width: 70%;
+    }
+}
+
+@media screen and (max-width: 1248px) {
+
+    #pageBlock {
+        transition: all .5s;
+        margin-top: 50px;
+    }
+
+    /* Menu de nav */
+
+    .navContainer {
+        display: none;
+    }
+
+    .navContainerSmall {
+        width: 100%;
+        height: 60px;
+        position: relative;
+        top: 0;
+    }
+
+    .navContainerSmall nav {
+        margin-left: auto;
+        margin-right: auto;
+        height: 100%;
+        width: 100%;
+    }
+
+    .navContainerSmall nav ul {
+        padding: 0;
+        background-color: white;
+    }
+
+    .navBackgroundSmall {
+        background-color: white;
+        border-bottom: 2px solid black;
+        position: absolute;
+        z-index: 997;
+        width: 100%;
+        height: 100%;
+    }
+
+    .navClickZone {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        z-index: 999;
+        cursor: pointer;
+    }
+
+    .navBlockASmall {
+        height: 100%;
+        width: 90%;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 0;
+        margin-bottom: 0;
+        display: flex;
+        justify-content: space-between;
+        position: relative;
+        z-index: 998;
+    }
+
+    .navLogoSmall {
+        display: flex;
+        align-items: center;
+    }
+
+    .navLogoSmall span {
+        font-family: 'amalfi_coastregular', Arial, Helvetica, sans-serif;
+    }
+
+    .navButtonSmall {
+        display: flex;
+        align-items: center;
+    }
+
+    .navBlockBSmall {
+        margin-top: 2px;
+        margin-bottom: 0;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        transition: all .5s;
+    }
+
+    .navBlockBSmall li {
+        border-bottom: 1px solid rgb(187, 187, 187);
+        height: 50px;
+    }
+
+    .navBlockBSmall li a {
+        display: flex;
+        justify-content: center;
+    }
+
+    .navBlockBSmall li p {
+        width: 90%;
+    }
+
+    .navDisplay {
+        display: none;
+    }
+
+    .navHide {
+        margin-top: -202px;
+    }
+
+    /* Homepage */
+
+    .homepageBlock {
+        flex-direction: column;
+    }
+
+    .navOpen {
+        margin-top: 254px !important;
+    }
+
+    .homepageBlockLeft {
+        width: 100%;
+        height: 800px;
+        flex-direction: column;
+    }
+
+    .homepageArticleImg {
+        width: 100%;
+        height: 450px;
+    }
+
+    .homepageArticle {
+        width: 100%;
+        height: 350px;
+    }
+
+    .homepageBlockRight {
+        width: 100%;
+        margin-top: 20px;
+    }
+
+    .homepageWhoAmI {
+        left: 0;
+        position: relative;
+        width: 100%;
+        height: 270px;
+    }
+
+    .homepageWhoAmIBlock img {
+        width: 125px;
+    }
+
+    .homepageSocialNetworks {
+        left: 0;
+        position: relative;
+        width: 100%;
+        margin-top: 20px;
+    }
+
+    .homepageSocialNetworksBlock {
+        width: 50%;
+    }
+
+    /* Articles */
+
+    .articleBlock {
+        flex-direction: column;
+        height: 500px;
+    }
+
+    .articleImg, .articleDscBlock {
+        width: 100%;
+    }
+
+    .articleImg {
+        overflow: hidden;
+        height: 50%;
+    }
+
+    .articleImg img {
+        height: auto;
+        width: 100%;
+        margin-top: -10%;
+    }
+
+    .articleDscBlock {
+        height: 50%;
+    }
+
+    /* Who am I */
+
+    .whoTitle {
+        width: 100%;
+    }
+
+    .whoContentBlock {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .whoImgBlock {
+        width: 100%;
+        margin-top: 0;
+    }
+
+    .whoImg {
+        background-color: white;
+        margin-top: 30px;
+        width: 200px;
+    }
+
+    .whoImg img {
+        margin: 3px 3px 3px 3px;
+    }
+
+    .whoImgBlock p {
+        position: relative;
+    }
+
+    .whoDscBlock {
+        margin-top: 0;
+        width: 100%;
+    }
+
+    /* Chapitre */
+
+    .chapitreTitle {
+        width: 100%;
+    }
+
+    .chapitreContentBlock {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 620px) {
+
+    /* Chapitres */
+
+    .articleImg {
+        height: 40%;
+    }
+
+    .articleImg img {
+        margin-top: 0;
+    }
+
+    .articleDscBlock {
+        height: 60%;
+    }
+}
+
+@media screen and (max-width: 513px) {
+
+    /* Homepage */
+
+    .homepageBlockLeft {
+        height: 870px;
+    }
+
+    .homepageArticle {
+        height: 420px;
+    }
+
+    .homepageWhoAmIBlock img {
+        width: 100px;
+    }
+
+    .homepageSocialNetworksBlock {
+        width: 65%;
+    }
+}
