@@ -1,6 +1,11 @@
 <?php
 
-abstract class Database
+namespace App\src\DAO;
+
+use PDO;
+use Exception;
+
+abstract class DAO
 
 {
     const DB_HOST = 'mysql:host=localhost;dbname=billet-alaska;charset=UTF8';
@@ -22,7 +27,7 @@ abstract class Database
     private function getConnection()
     {
         try{
-            $this->connection = new PDO(Database::DB_HOST, Database::DB_USER, Database::DB_PASS);
+            $this->connection = new PDO(DAO::DB_HOST, DAO::DB_USER, DAO::DB_PASS);
             $this->connection->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
             return $this->connection;
         }

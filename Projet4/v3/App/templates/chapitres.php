@@ -1,6 +1,7 @@
 <?php
-require 'Database.php';
-require 'Article.php'
+require '../vendor/autoload.php';
+
+use App\src\DAO\ArticleDAO;
 ?>
 
 <!DOCTYPE html>
@@ -8,10 +9,10 @@ require 'Article.php'
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width">
-    <title>P4 v1 - page Chapitres</title>
-    <link rel="stylesheet" href="./css/style.css">
-    <link rel="stylesheet" href="./css/responsive.css">
-    <link rel="stylesheet" href="./css/fonts.css">
+    <title>P4 v3 - page Chapitres</title>
+    <link rel="stylesheet" href="../public/css/style.css">
+    <link rel="stylesheet" href="../public/css/responsive.css">
+    <link rel="stylesheet" href="../public/css/fonts.css">
     <script src="https://kit.fontawesome.com/09cce809d6.js" crossorigin="anonymous"></script>
 </head>
 
@@ -19,12 +20,12 @@ require 'Article.php'
     <div class="navContainer">
         <nav>
             <ul class="navBlockA">
-                <li><a href="index.php">Billet pour</br>l'alaska</a></li>
+                <li><a href="./index.php">Billet pour</br>l'alaska</a></li>
             </ul>
             <ul class="navBlockB">
-                <li><a class="navLink" href="index.php">ACCUEIL</a></li>
-                <li><a class="navLink navActive" href="chapitres.php">CHAPITRES</a></li>
-                <li><a class="navLink" href="presentation.html">QUI SUIS-JE</a></li>
+                <li><a class="navLink" href="./index.php">ACCUEIL</a></li>
+                <li><a class="navLink navActive" href="./chapitres.php">CHAPITRES</a></li>
+                <li><a class="navLink" href="./presentation.html">QUI SUIS-JE</a></li>
             </ul>
             <ul class="navBlockC">
                 <li><a class="navLink" href="#">ADMINISTRATION</a></li>
@@ -52,7 +53,7 @@ require 'Article.php'
     <section id="pageBlock" class="articlepageBlock">
 
         <?php
-        $article = new Article();
+        $article = new ArticleDAO();
         $articles = $article->getArticles();
 
         while($article = $articles->fetch())
@@ -60,14 +61,14 @@ require 'Article.php'
             ?>
             <div class="articleBlock">
                 <div class="articleImg">
-                    <img src="./img/alaska-glacier.jpg">
+                    <img src="../public/img/alaska-glacier.jpg">
                 </div>
                 <div class="articleDscBlock">
                     <div class="articleDsc">
                         <h2><?= htmlspecialchars($article->titre);?></h2>
                         <p><?= htmlspecialchars($article->contenu);?> [...]</p>
                         <div class="articleDscLinkBlock">
-                            <a class="articleDscLink" href="chapitre.php?articleId=<?=htmlspecialchars($article->id);?>">
+                            <a class="articleDscLink" href="./chapitre.php?articleId=<?=htmlspecialchars($article->id);?>">
                                 <b>LIRE LA SUITE</b>
                                 <div class="linkBorder"></div>
                             </a>
@@ -84,7 +85,7 @@ require 'Article.php'
 
     </section>
 
-<script type="module" src="./js/main.js"></script>
+<script type="module" src="../public/js/main.js"></script>
 </body>
 
 </html>

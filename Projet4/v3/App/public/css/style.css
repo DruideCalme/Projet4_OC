@@ -258,14 +258,14 @@ a:hover .linkBorder {
     transition: all .1s;
 }
 
-.lastComSeparator {
+.lastComSeparator, .comSeparator {
     background-color: rgb(20, 20, 20);
     width: 100%;
     height: 2px;
     margin-top: 40px;
 }
 
-.homepageBlockCom {
+.homepageBlockCom, .blockCom {
     width: 100%;
     margin-top: 40px;
     position: relative;
@@ -278,7 +278,13 @@ a:hover .linkBorder {
     text-align: center;
 }
 
-.lastCom {
+.blockCom h2 {
+    margin-top: 0;
+    margin-bottom: 0;
+    text-align: left;
+}
+
+.lastCom, .com {
     display: flex;
     margin-top: 40px;
     width: 70%;
@@ -286,31 +292,38 @@ a:hover .linkBorder {
     margin-right: auto;
 }
 
-.lastComImg {
+.com {
+    display: flex;
+    margin-top: 40px;
+    width: 70%;
+    margin-left: 0;
+}
+
+.lastComImg, .comImg {
     width: 70px;
 }
 
-.lastComImg img {
+.lastComImg img, .comImg img {
     width: 100%;
     border-radius: 50%;
 }
 
-.lastComContentBlock {
+.lastComContentBlock, .comContentBlock {
     width: 95%;
     padding-left: 20px;
 }
 
-.lastComContent {
+.lastComContent, .comContent {
     margin-top: 0;
     margin-bottom: 0;
 }
 
-.lastComName {
+.lastComName, .comName {
     font-weight: bold;
     margin-top: 0;
 }
 
-.lastComInfos {
+.lastComInfos, .comInfos {
     margin-bottom: 0;
     font-style: italic;
 }

@@ -1,6 +1,8 @@
 <?php
 
-class Article extends Database
+namespace App\src\DAO;
+
+class ArticleDAO extends DAO
 
 {
     public function getArticles()
@@ -17,7 +19,7 @@ class Article extends Database
 
     public function getLastArticle()
     {
-        $sql = 'SELECT id, titre, contenu, date FROM chapitre ORDER BY id DESC';
-        return $this->createQuery($sql)->fetch();
+        $sql = 'SELECT id, titre, contenu, date FROM chapitre ORDER BY id DESC LIMIT 1';
+        return $this->createQuery($sql);
     }
 }
