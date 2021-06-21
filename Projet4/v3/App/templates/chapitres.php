@@ -1,9 +1,3 @@
-<?php
-require '../vendor/autoload.php';
-
-use App\src\DAO\ArticleDAO;
-?>
-
 <!DOCTYPE html>
 <html lang="fr">
 <head>
@@ -24,8 +18,8 @@ use App\src\DAO\ArticleDAO;
             </ul>
             <ul class="navBlockB">
                 <li><a class="navLink" href="./index.php">ACCUEIL</a></li>
-                <li><a class="navLink navActive" href="./chapitres.php">CHAPITRES</a></li>
-                <li><a class="navLink" href="./presentation.html">QUI SUIS-JE</a></li>
+                <li><a class="navLink navActive" href="./index.php?route=chapitres">CHAPITRES</a></li>
+                <li><a class="navLink" href="./index.php?route=presentation">QUI SUIS-JE</a></li>
             </ul>
             <ul class="navBlockC">
                 <li><a class="navLink" href="#">ADMINISTRATION</a></li>
@@ -42,9 +36,9 @@ use App\src\DAO\ArticleDAO;
                 <li class="navButtonSmall"><span class="fas fa-bars fa-2x"></span></li>
             </ul>
             <ul class="navBlockBSmall navHide navDisplay">
-                <li><a class="navLinkSmall" href="index.php"><p>ACCUEIL</p></a></li>
-                <li><a class="navLinkSmall" href="chapitres.php"><p>CHAPITRES</p></a></li>
-                <li><a class="navLinkSmall" href="presentation.html"><p>QUI SUIS-JE</p></a></li>
+                <li><a class="navLinkSmall" href="./index.php"><p>ACCUEIL</p></a></li>
+                <li><a class="navLinkSmall" href="./index.php?route=chapitres"><p>CHAPITRES</p></a></li>
+                <li><a class="navLinkSmall" href="./index.php?route=presentation"><p>QUI SUIS-JE</p></a></li>
                 <li><a class="navLinkSmall" href="#"><p>ADMINISTRATION</p></a></li>
             </ul>
         </nav>
@@ -53,9 +47,6 @@ use App\src\DAO\ArticleDAO;
     <section id="pageBlock" class="articlepageBlock">
 
         <?php
-        $article = new ArticleDAO();
-        $articles = $article->getArticles();
-
         while($article = $articles->fetch())
         {
             ?>
@@ -68,7 +59,7 @@ use App\src\DAO\ArticleDAO;
                         <h2><?= htmlspecialchars($article->titre);?></h2>
                         <p><?= htmlspecialchars($article->contenu);?> [...]</p>
                         <div class="articleDscLinkBlock">
-                            <a class="articleDscLink" href="./chapitre.php?articleId=<?=htmlspecialchars($article->id);?>">
+                            <a class="articleDscLink" href="../public/index.php?route=chapitre&articleId=<?=htmlspecialchars($article->id);?>">
                                 <b>LIRE LA SUITE</b>
                                 <div class="linkBorder"></div>
                             </a>

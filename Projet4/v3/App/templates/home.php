@@ -1,10 +1,3 @@
-<?php
-require '../vendor/autoload.php';
-
-use App\src\DAO\ArticleDAO;
-use App\src\DAO\CommentDAO;
-?>
-
 <!DOCTYPE html>
 <html lang="fr">
 <head>
@@ -26,8 +19,8 @@ use App\src\DAO\CommentDAO;
             <ul class="navBlockB">
                 <li><a class="navLink navActive" href="./index.php">ACCUEIL</a>
                 </li>
-                <li><a class="navLink" href="./chapitres.php">CHAPITRES</a></li>
-                <li><a class="navLink" href="./presentation.html">QUI SUIS-JE</a></li>
+                <li><a class="navLink" href="./index.php?route=chapitres">CHAPITRES</a></li>
+                <li><a class="navLink" href="./index.php?route=presentation">QUI SUIS-JE</a></li>
             </ul>
             <ul class="navBlockC">
                 <li><a class="navLink" href="#">ADMINISTRATION</a></li>
@@ -45,8 +38,8 @@ use App\src\DAO\CommentDAO;
             </ul>
             <ul class="navBlockBSmall navHide navDisplay">
                 <li><a class="navLinkSmall" href="./index.php"><p>ACCUEIL</p></a></li>
-                <li><a class="navLinkSmall" href="./chapitres.php"><p>CHAPITRES</p></a></li>
-                <li><a class="navLinkSmall" href="./presentation.html"><p>QUI SUIS-JE</p></a></li>
+                <li><a class="navLinkSmall" href="./index.php?route=chapitres"><p>CHAPITRES</p></a></li>
+                <li><a class="navLinkSmall" href="./index.php?route=presentation"><p>QUI SUIS-JE</p></a></li>
                 <li><a class="navLinkSmall" href="#"><p>ADMINISTRATION</p></a></li>
             </ul>
         </nav>
@@ -70,14 +63,12 @@ use App\src\DAO\CommentDAO;
                         </ul>
 
                         <?php
-                        $articles = new ArticleDAO();
-                        $article = $articles->getLastArticle();
                         $article = $article->fetch();
                         ?>
 
                         <h2><?= htmlspecialchars($article->titre);?></h2>
                         <p><?= htmlspecialchars($article->contenu);?> [...]</p>
-                        <a href="./chapitre.php?articleId=<?=htmlspecialchars($article->id);?>">
+                        <a href="../public/index.php?route=chapitre&articleId=<?=htmlspecialchars($article->id);?>">
                             <b>LIRE LA SUITE</b>
                             <div class="linkBorder"></div>
                         </a>
@@ -109,8 +100,6 @@ use App\src\DAO\CommentDAO;
                 <h2>Dernier commentaire</h2>
 
                 <?php 
-                $comments = new CommentDAO();
-                $lastComment = $comments->getLastComment();
                 $lastComment = $lastComment->fetch();
                 ?>
 

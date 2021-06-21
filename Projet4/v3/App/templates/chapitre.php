@@ -1,10 +1,3 @@
-<?php
-require '../vendor/autoload.php';
-
-use App\src\DAO\ArticleDAO;
-use App\src\DAO\CommentDAO;
-?>
-
 <!DOCTYPE html>
 <html lang="fr">
 <head>
@@ -25,8 +18,8 @@ use App\src\DAO\CommentDAO;
             </ul>
             <ul class="navBlockB">
                 <li><a class="navLink" href="./index.php">ACCUEIL</a></li>
-                <li><a class="navLink navActive" href="./chapitres.php">CHAPITRES</a></li>
-                <li><a class="navLink" href="./presentation.html">QUI SUIS-JE</a></li>
+                <li><a class="navLink navActive" href="./index.php?route=chapitres">CHAPITRES</a></li>
+                <li><a class="navLink" href="./index.php?route=presentation">QUI SUIS-JE</a></li>
             </ul>
             <ul class="navBlockC">
                 <li><a class="navLink" href="#">ADMINISTRATION</a></li>
@@ -44,8 +37,8 @@ use App\src\DAO\CommentDAO;
             </ul>
             <ul class="navBlockBSmall navHide navDisplay">
                 <li><a class="navLinkSmall" href="./index.php"><p>ACCUEIL</p></a></li>
-                <li><a class="navLinkSmall" href="./chapitres.php"><p>CHAPITRES</p></a></li>
-                <li><a class="navLinkSmall" href="./presentation.html"><p>QUI SUIS-JE</p></a></li>
+                <li><a class="navLinkSmall" href="./index.php?route=chapitres"><p>CHAPITRES</p></a></li>
+                <li><a class="navLinkSmall" href="./index.php?route=presentation"><p>QUI SUIS-JE</p></a></li>
                 <li><a class="navLinkSmall" href="#"><p>ADMINISTRATION</p></a></li>
             </ul>
         </nav>
@@ -54,8 +47,6 @@ use App\src\DAO\CommentDAO;
     <section id="pageBlock">
 
         <?php 
-        $article = new ArticleDAO();
-        $articles = $article->getArticle($_GET['articleId']);
         $article = $articles->fetch();
         ?>
 
@@ -68,7 +59,7 @@ use App\src\DAO\CommentDAO;
                 <div class="chapitreDscContent">
                     <p><?= htmlspecialchars($article->contenu);?></p>
                     <div class="backToArticles">
-                        <a href="./chapitres.php">
+                        <a href="./index.php?route=chapitres">
                             <b>RETOUR AUX CHAPITRES</b>
                             <div class="linkBorder"></div>
                         </a>
@@ -83,9 +74,6 @@ use App\src\DAO\CommentDAO;
             <h2>Commentaires</h2>
             
         <?php
-        $comment = new CommentDAO();
-        $comments = $comment->getCommentsFromArticle($_GET['articleId']);
-
         if(!$comment = $comments->fetch())
         {
             ?>
