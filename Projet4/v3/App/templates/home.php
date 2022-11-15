@@ -23,7 +23,7 @@
                 <li><a class="navLink" href="./index.php?route=presentation">QUI SUIS-JE</a></li>
             </ul>
             <ul class="navBlockC">
-                <li><a class="navLink" href="#">ADMINISTRATION</a></li>
+                <li><a class="navLink" href="#">blabla</a></li>
             </ul>
         </nav>
     </div>
