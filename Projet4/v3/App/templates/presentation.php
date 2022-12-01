@@ -1,7 +1,7 @@
 <?php $this->title = "P4 v3 - Qui suis-je"; ?>
 
-<section id="pageBlock" class="whopageBlock">
-    <div class="whoTitle">
+<section id="pageBlock" class="whoPageBlock">
+    <div id="pageTitle">
         <h2>Qui suis-je</h2>
     </div>
     <div class="whoContentBlock">
@@ -10,6 +10,15 @@
                 <img src="../public/img/j-forteroche.jpg">
             </div>
             <p>Jean Forteroche</p>
+            <div class="homepageSocialNetworks whoSocialNetworks">
+            <h2>Réseaux sociaux</h2>
+            <div class="homepageSocialNetworksBlock">
+                <a href="https://www.facebook.com/" target="_blank"><img src="../public/img/facebook-icone.png"></a>
+                <a href="https://twitter.com/" target="_blank"><img src="../public/img/twitter-icone.png"></a>
+                <a href="https://linkedin.com/" target="_blank"><img src="../public/img/linkedin-icone.png"></a>
+                <a href="https://www.instagram.com/" target="_blank"><img src="../public/img/instagram-icone.png"></a>
+            </div>
+            </div>
         </div>
         <div class="whoDscBlock">
             <div class="whoDsc">

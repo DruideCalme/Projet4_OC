@@ -180,6 +180,10 @@
         margin-top: 20px;
     }
 
+    .homepageArticleBlock-contentFlex {
+        height: 80%;
+    }
+
     .homepageWhoAmI {
         left: 0;
         position: relative;
@@ -272,6 +276,62 @@
     .chapitreContentBlock {
         width: 100%;
     }
+
+    /* Espace Perso / Administration */
+
+    .espacePersoBlockInfo {
+        padding: 0;
+    }
+
+    .espacePersoBlockNav, .espacePersoBlockNavUsers {
+        display: none;
+    }
+
+    .espacePersoBlockNavMobile {
+        display: flex;
+        flex-wrap: wrap;
+        height: 104px;
+        margin-bottom: 40px;
+    }
+
+    .espacePersoBlockNavMobile div {
+        width: 33.3%;
+        height: 50px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .NavMobileUsers div {
+        width: 50%;
+        height: 50px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .espacePersoBlockNavMobile a {
+        background-color: white;
+        width: 98%;
+        height: 46px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border: 1px solid rgb(143, 143, 157);
+        text-align: center;
+    }
+
+    .espacePersoBlockNavMobile a:hover {
+        color: rgb(75, 75, 75);
+    }
+
+    .manageArticlesBlock li, .manageUsersBlock li, .manageComsBlock li {
+        flex-direction: column;
+    }
+
+    .editArticleLinks, .manageComLinks, .flag {
+        margin-top: 10px;
+    }
 }
 
 @media screen and (max-width: 620px) {
@@ -289,6 +349,24 @@
     .articleDscBlock {
         height: 60%;
     }
+
+    .articleDscContent {
+        height: 78%;
+    }
+
+    /* Espace Perso / Administration */
+
+    .espacePersoBlockNavMobile {
+        height: 300px;
+    }
+
+    .NavMobileUsers {
+        height: 200px;
+    }
+
+    .espacePersoBlockNavMobile div {
+        width: 100%;
+    }
 }
 
 @media screen and (max-width: 513px) {
@@ -297,6 +375,10 @@
 
     .homepageBlockLeft {
         height: 870px;
+    }
+
+    .homepageArticleBlock-contentFlex {
+        height: 85%;
     }
 
     .homepageArticle {

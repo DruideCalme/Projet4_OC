@@ -15,22 +15,30 @@
         <div class="homepageArticle">
             <div class="homepageArticleBlock">
                 <div class="homepageArticleBlock-content">
-                    <ul class="homepageArticleNav">
-                        <li class="homepageArticleNav-li"></li>
-                        <li class="homepageArticleNav-li"></li>
-                        <li class="homepageArticleNav-li active"></li>
-                        <li class="homepageArticleNav-li"></li>
-                        <li class="homepageArticleNav-li"></li>
-                        <li class="homepageArticleNav-li"></li>
-                        <li class="homepageArticleNav-li"></li>
-                        <li class="homepageArticleNav-li"></li>
-                    </ul>
-                    <h2><?= htmlspecialchars($lastArticle->getTitle());?></h2>
-                    <p><?= htmlspecialchars($lastArticle->getContent());?> [...]</p>
-                    <a href="../public/index.php?route=chapitre&articleId=<?=htmlspecialchars($lastArticle->getId());?>">
-                        <b>LIRE LA SUITE</b>
-                        <div class="linkBorder"></div>
-                    </a>
+                    <div class="homepageArticleBlock-contentFlex">
+                        <div class="homepageArticleTitle">
+                            <ul class="homepageArticleNav">
+                                <li class="homepageArticleNav-li active"></li>
+                                <li class="homepageArticleNav-li"></li>
+                                <li class="homepageArticleNav-li"></li>
+                                <li class="homepageArticleNav-li"></li>
+                                <li class="homepageArticleNav-li"></li>
+                                <li class="homepageArticleNav-li"></li>
+                                <li class="homepageArticleNav-li"></li>
+                                <li class="homepageArticleNav-li"></li>
+                            </ul>
+                            <h2><?= htmlspecialchars($lastArticle->getTitle());?></h2>
+                        </div>
+                        <span>
+                            <?= $lastArticle->getContent()?>
+                        </span>
+                    </div>
+                    <div class="homepageArticleLink">
+                        <a href="../public/index.php?route=chapitre&articleId=<?=htmlspecialchars($lastArticle->getId());?>">
+                            <b>LIRE LA SUITE</b>
+                            <div class="linkBorder"></div>
+                        </a>
+                    </div>
                 </div>
             </div>
         </div>
@@ -63,7 +71,7 @@
                 </div>
                 <div class="lastComContentBlock">
                     <p class="lastComName"><?=htmlspecialchars($lastComment->getPseudo());?></p>
-                    <p class="lastComContent"><?=htmlspecialchars($lastComment->getContent());?></p>
+                    <p class="lastComContent"><?=$lastComment->getContent();?></p>
                     <p class="lastComInfos">Chapitre <span class="chapterNum"><?=htmlspecialchars($lastComment->getArticleId());?></span> Le <span class="lastComDate"><?=htmlspecialchars($lastComment->getCreatedAt());?></span></p>
                 </div>
             </div>

@@ -277,16 +277,28 @@ class BackController extends Controller
         }
     }
 
-    public function deleteAccount()
+    public function deleteAccount(Parameter $post)
     {
         if ($this->checkAdmin()) {
             header('Location: ../public/index.php?route=espacePerso');
         } else if ($this->checkLoggedIn()) {
-            $this->userDAO->deleteAccount($this->session->get('user'));
-            $this->session->destroy();
-            $this->session->start();
-            $this->session->set('delete_account', 'Votre compte à bien été supprimé');
-            header('Location: ../public/index.php');
+            if ($post->get('submit')) {
+                $result = $this->userDAO->login($post);
+                if ($result && $result['isPasswordValid']) {
+                    $this->userDAO->deleteAccount($this->session->get('user'));
+                    $this->session->destroy();
+                    $this->session->start();
+                    $this->session->set('delete_account', 'Votre compte à bien été supprimé');
+                    header('Location: ../public/index.php');
+                } else {
+                    $this->session->set('error_deleting_account', 'Le mot de passe est incorrect');
+                    $this->view->render('delete_account', [
+                        'post' => $post
+                    ]);
+                }
+            } else {
+                $this->view->render('delete_account');
+            }
         } else {
             header('Location: ../public/index.php?route=espacePerso');
         }

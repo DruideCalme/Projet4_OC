@@ -1,6 +1,9 @@
 <?php $this->title = "P4 v3 - page Chapitres"; ?>
 
-<section id="pageBlock" class="articlepageBlock">
+<section id="pageBlock" class="articlesPageBlock">
+    <div id="pageTitle" class="articlesPageTitle">
+        <h2>Chapitres</h2>
+    </div>
     <?php
     foreach ($articles as $article)
     {
@@ -11,8 +14,10 @@
             </div>
             <div class="articleDscBlock">
                 <div class="articleDsc">
-                    <h2><?= htmlspecialchars($article->getTitle());?></h2>
-                    <p><?= htmlspecialchars($article->getContent());?> [...]</p>
+                    <div class="articleDscContent">
+                        <h2><?= htmlspecialchars($article->getTitle());?></h2>
+                        <span><?= $article->getContent();?></span>
+                    </div>
                     <div class="articleDscLinkBlock">
                         <a class="articleDscLink" href="../public/index.php?route=chapitre&articleId=<?=htmlspecialchars($article->getId());?>">
                             <b>LIRE LA SUITE</b>

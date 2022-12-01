@@ -1,8 +1,17 @@
 <?php $this->title = "P4 v3 - page Modifier commentaire"; ?>
 
 <section id="pageBlock">
-    <div class="addCommentBlock">
-        <h2>Modifier un commentaire</h2>
-        <?php include 'form_comment.php'; ?>
-    </div>      
+    <div class="espacePersoBlock">
+        <?php
+        if ($this->session->getUserInfo('role') === 'admin') {
+            include 'admin_nav.php';
+        } else {
+            include 'user_nav.php';
+        }
+        ?>
+        <div class="espacePersoBlockInfo">
+            <h2>Modifier un commentaire</h2>
+            <?php include 'form_comment.php'; ?>
+        </div>
+    </div>
 </section>

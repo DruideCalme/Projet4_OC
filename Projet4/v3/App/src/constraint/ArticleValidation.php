@@ -32,7 +32,6 @@ class ArticleValidation extends Validation
 
     private function checkContent($name, $value)
     {
-        //Si constraint renvoie qqchose, c'est le message d'erreur
         if ($this->constraint->notBlank($name, $value)) {
             return $this->constraint->notBlank($name, $value);
         }

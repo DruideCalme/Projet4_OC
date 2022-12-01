@@ -1,12 +1,23 @@
-<?php $this->title = "P4 v3 - page Supprimer son compte"; ?>
+<?php 
+    $this->title = "P4 v3 - page Supprimer son compte";
+    $confirm = 0;
+?>
 
 <section id="pageBlock">
-    <div class="deleteAccountBlock">
-        <p>Entrez votre mot de passe pour supprimer le compte de (pseudo ici)</p>
-        <form method="post" action="#">
-            <label for="password">Mot de passe</label><br>
-            <input type="password" id="password" name="password"><br>
-            <input type="submit" value="Supprimer" id="submit" name="submit">
-        </form>
+    <?= $this->session->show('error_deleting_account'); ?>
+    <div class="espacePersoBlock">
+        <?php include 'user_nav.php'; ?>
+        <div class="espacePersoBlockInfo">
+            <h2>Supprimer votre compte</h2>
+            <form method="post" action="../public/index.php?route=deleteAccount" id="deleteAccount">
+                <input type="hidden" name="pseudo" id="pseudo" value="<?= $this->session->getUserInfo('pseudo'); ?>">
+                <label for="password">Saisissez votre mot de passe pour supprimer votre compte</label>
+                <div class="loginFormInput">
+                    <input type="password" id="password" name="password" placeholder="Mot de passe"><br>
+                </div>
+                <?= isset($errors) ? $errors['password'] : ''?>
+                <input type="submit" value="Supprimer" id="submit" name="submit"> 
+            </form>
+        </div>
     </div>
 </section>

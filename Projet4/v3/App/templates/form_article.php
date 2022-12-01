@@ -12,12 +12,14 @@ $content = isset($post) ? htmlspecialchars($post->get('content')) : '';
 $submit = $route === $add_route ? 'Envoyer' : 'Mettre à jour';
 ?>
 
-<form action="../public/index.php?route=<?= $route; ?>" method="post">
+<form id="articleForm" action="../public/index.php?route=<?= $route; ?>" method="post">
     <label for="title">Titre</label><br>
-    <input type="text" id="title" name="title" value="<?= $title; ?>"><br>
+    <div class="articleFormInput">
+        <input type="text" id="title" name="title" value="<?= $title; ?>" placeholder="Titre du chapitre"><br>
+    </div>
     <?= isset($errors['title']) ? $errors['title'] : '' ?>
     <label for="content">Contenu</label><br>
-    <textarea name="content" id="contenu" cols="30" rows="10"><?= $content; ?></textarea><br>
+    <textarea name="content" id="contenu" cols="30" rows="10" placeholder="Rédiger un chapitre"><?= $content; ?></textarea><br>
     <?= isset($errors['content']) ? $errors['content'] : '' ?>
     <input type="submit" value="<?= $submit; ?>" id="submit" name="submit">
 </form>

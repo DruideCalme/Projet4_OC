@@ -46,7 +46,7 @@ class Router
                 } elseif ($route === 'updatePass') {
                     $this->backController->updatePass($post);
                 } elseif ($route === 'deleteAccount') {
-                    $this->backController->deleteAccount();
+                    $this->backController->deleteAccount($post);
                 } elseif ($route === 'manageArticles') {
                     $this->backController->manageArticles();
                 } elseif ($route === 'addArticle') {

@@ -1,6 +1,6 @@
 <?php $this->title = "P4 v3 - page Chapitre"; ?>
 
-<section id="pageBlock">
+<section id="pageBlock" class="chapitrePageBlock">
     <div style="display: none">
         <p>
             <?= $this->session->show('add_comment'); ?>
@@ -14,7 +14,7 @@
         <div class="chapitreImg"></div>
         <div class="chapitreDsc">
             <div class="chapitreDscContent">
-                <p><?= htmlspecialchars($article->getContent());?></p>
+                <?= $article->getContent();?>
                 <div class="backToArticles">
                     <a href="./index.php?route=chapitres">
                         <b>RETOUR AUX CHAPITRES</b>
@@ -44,7 +44,7 @@
                 </div>
                 <div class="comContentBlock">
                     <p class="comName"><?=htmlspecialchars($comment->getPseudo());?></p>
-                    <p class="comContent"><?=htmlspecialchars($comment->getContent());?></p>
+                    <p class="comContent"><?=$comment->getContent();?></p>
                     <p class="comInfos">Le <span class="comDate"><?=htmlspecialchars($comment->getCreatedAt());?></span></p>
                     <a href="./index.php?route=flagComment&commentId=<?=htmlspecialchars($comment->getId());?>&articleId=<?=htmlspecialchars($article->getId());?>">Signaler commentaire</a>
                 </div>

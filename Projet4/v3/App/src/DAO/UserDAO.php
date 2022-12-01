@@ -55,7 +55,7 @@ class UserDAO extends DAO
 
     public function login(Parameter $post)
     {
-        $sql = 'SELECT u.id, u.pseudo, u.role_id, u.password, r.name AS role FROM users as u INNER JOIN role as r ON r.id = u.role_id WHERE pseudo=:pseudo';
+        $sql = 'SELECT u.id, u.pseudo, u.role_id, u.password, u.createdAt, r.name AS role FROM users as u INNER JOIN role as r ON r.id = u.role_id WHERE pseudo=:pseudo';
         $data = $this->createQuery($sql, [
             'pseudo' => $post->get('pseudo')
         ]);

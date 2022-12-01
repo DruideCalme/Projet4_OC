@@ -1,10 +1,24 @@
-body {
+body, #submit, pre {
     padding: 0;
     margin: 0;
     font-family: Arial, Helvetica, sans-serif; 
 }
 
-p, a, h1, h2, h3 {
+#submit {
+    width: 100px;
+    height: 22px;
+    font-size: 0.8em;
+}
+
+#submit:hover {
+    cursor: pointer;
+}
+
+input:focus {
+    outline: none;
+}
+
+p, a, h1, h2, h3, span, #submit, pre {
     color: rgb(20, 20, 20);
 }
 
@@ -24,6 +38,11 @@ ul {
     margin-right: auto;
     margin-top: 40px;
     margin-bottom: 20px;
+}
+
+#pageTitle {
+    width: 100%;
+    text-align: center;
 }
 
 @media screen and (min-width: 1249px) {
@@ -116,7 +135,6 @@ ul {
     right: 20px;
     bottom: 20px;
     position: absolute;
-    contain: content;
 }
 
 .homepageArticleBlock-content {
@@ -125,6 +143,21 @@ ul {
     right: 30px;
     bottom: 30px;
     position: absolute;
+}
+
+.homepageArticleBlock-contentFlex {
+    display: flex;
+    flex-direction: column;
+    height: 90%;
+}
+
+.homepageArticleBlock-contentFlex span {
+    overflow: hidden;
+}
+
+.homepageArticleLink {
+    position: absolute;
+    bottom: 0;
 }
 
 .homepageArticleNav {
@@ -143,13 +176,7 @@ li[class="homepageArticleNav-li active"] {
     background-color: black;
 }
 
-.homepageArticleBlock-content p {
-    height: 50%;
-}
-
 .homepageArticleBlock-content a {
-    position: absolute;
-    bottom: 0;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -328,9 +355,11 @@ a:hover .linkBorder {
     font-style: italic;
 }
 
-/* Articles */
+.articlesPageTitle {
+    margin-bottom: 40px;
+}
 
-.articlepageBlock {
+.articlesPageBlock {
     display: flex;
     flex-direction: column;
     width: 70%;
@@ -340,6 +369,9 @@ a:hover .linkBorder {
     height: 250px;
     margin-bottom: 20px;
     display: flex;
+    width: 70%;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .articleImg {
@@ -349,6 +381,7 @@ a:hover .linkBorder {
 }
 
 .articleImg img {
+    height: inherit;
     width: 100%;
 }
 
@@ -372,8 +405,18 @@ a:hover .linkBorder {
     padding: 20px 20px 15px 20px;
 }
 
-.articleDsc h2, .articleDsc p {
-    margin: 0;
+.articleDscContent {
+    height: 80%;
+    display: flex;
+    flex-direction: column;
+}
+
+.articleDscContent h2 {
+    margin-top: 0;
+}
+
+.articleDscContent span {
+    overflow: hidden;
 }
 
 .articleDscLinkBlock {
@@ -389,6 +432,11 @@ a:hover .linkBorder {
 }
 
 /* Chapitre */
+
+.chapitrePageBlock {
+    display: flex;
+    flex-direction: column;
+}
 
 .chapitreTitle {
     width: 100%;
@@ -442,13 +490,12 @@ a:hover .linkBorder {
 
 /* Who am I */
 
-.whoTitle {
-    width: 100%;
-    text-align: center;
+.whoPageBlock {
+    display: flex;
+    flex-direction: column;
 }
 
 .whoContentBlock {
-    margin-top: 40px;
     display: flex;
     width: 70%;
     margin-bottom: 50px;
@@ -465,7 +512,7 @@ a:hover .linkBorder {
 
 .whoImgBlock p {
     position: absolute;
-    top: 30%;
+    top: 40%;
     width: 100%;
     text-align: center;
     font-size: 1.8em;
@@ -473,11 +520,11 @@ a:hover .linkBorder {
 }
 
 .whoImg {
-    background-color: rgb(216, 216, 216);
+    background-color: rgb(255, 255, 255);
     width: 250px;
     margin-left: auto;
     margin-right: auto;
-    margin-top: -100px;
+    margin-top: -50px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -486,8 +533,15 @@ a:hover .linkBorder {
 
 .whoImg img {
     width: 100%;
-    margin: 20px 20px 20px 20px;
+    margin: 10px 10px 10px 10px;
     border-radius: 50%;
+}
+
+.whoSocialNetworks {
+    margin-bottom: 30px;
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .whoDscBlock {
@@ -508,4 +562,248 @@ a:hover .linkBorder {
 
 .whoDsc p {
     margin: 0;
+}
+
+/* Espace Perso / Administration */
+
+.espacePersoBlock {
+    display: flex;
+    width: 100%;
+    min-height: 500px;
+}
+
+.espacePersoBlockNav, .espacePersoBlockNavUsers {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding-right: 40px;
+    border-right: solid 1px #969696;
+    min-width: 245px;
+}
+
+.espacePersoBlockNav {
+    height: 500px;
+}
+
+.espacePersoBlockNavUsers {
+    height: 338px;
+}
+
+.espacePersoBlockNav a:hover, .espacePersoBlockNavUsers a:hover {
+    color: rgb(75, 75, 75);
+}
+
+.espacePersoBlockInfo {
+    padding-left: 40px;
+    width: 100%;
+}
+
+.espacePersoBlockNavMobile {
+    display: none;
+}
+
+.espacePersoBlockInfo h2 {
+    margin-top: 0;
+    margin-bottom: 20px;
+}
+
+.manageArticlesBlock ul {
+    border-top: solid 1px #969696;
+}
+
+.manageArticlesBlock li, .manageUsersBlock li {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 0 20px 0;
+    border-bottom: solid 1px #969696;
+}
+
+.addArticleLink a:hover {
+    color: rgb(75, 75, 75);
+}
+
+.editArticleContent {
+    max-width: 720px;
+}
+
+.articleDate {
+    font-style: italic;
+}
+
+.editArticleLinks, .manageComLinks {
+    display: flex;
+    justify-content: space-between;
+}
+
+.editArticleLinks, .flag {
+    width: 195px;
+}
+
+.editArticleLinks a, .manageComLinks a {
+    background-color: rgb(233, 233, 237);
+    border: 1px solid rgb(143, 143, 157);
+    border-radius: 4px;
+    font-size: 0.8em;
+    width: 90px;
+    height: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.editArticleLinks a:hover, .manageComLinks a:hover {
+    background-color: rgb(208, 208, 215);
+    border: 1px solid rgb(103, 103, 116);
+}
+
+.manageComsBlock h2 {
+    padding-bottom: 0;
+}
+
+.manageComsBlock ul, .manageUsersBlock ul {
+    margin-bottom: 20px;
+    border-top: solid 1px #969696;
+}
+
+.manageComsBlock .noComment {
+    padding-bottom: 20px;
+}
+
+.manageComsBlock li {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    border-bottom: solid 1px #969696;
+    padding: 20px 0 20px 0;
+}
+
+.manageComContent {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.manageComContent b {
+    margin: 0 4px 0 4px;
+}
+
+.manageComContent p {
+    margin: 0 4px 0 0;
+    max-width: 720px;
+}
+
+.manageComContent span, .manageUserContent span {
+    margin: 0 0 0 4px;
+    font-style: italic;
+}
+
+.updatePassBlock {
+    max-width: 320px;
+}
+
+.updatePassBlock #submit {
+    margin-top: 20px;
+}
+
+#deleteAccount {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 120px;
+    max-width: 420px;
+}
+
+/* Se connecter / Inscription */
+
+.loginBlock, .registerBlock {
+    width: 70%;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    flex-direction: column;
+}
+
+.loginTitle {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.loginForm {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 50%;
+    height: 200px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.loginForm form {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.loginFormInput {
+    width: 99.8%;
+    height: 35px;
+    border: 1px solid rgb(143, 143, 157);
+    border-radius: 8px;
+    display: flex;
+    justify-content: center;
+}
+
+.loginFormInput input {
+    border: none;
+    width: 96%;
+    font-size: 0.95em;
+}
+
+.loginButtons {
+    display: flex;
+}
+
+.loginForm #submit {
+    margin-right: 20px;
+}
+
+.loginForm a {
+    background-color: rgb(233, 233, 237);
+    border: 1px solid rgb(143, 143, 157);
+    border-radius: 4px;
+    font-size: 0.8em;
+    width: 98px;
+    height: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.loginForm a:hover {
+    background-color: rgb(208, 208, 215);
+    border: 1px solid rgb(103, 103, 116);
+}
+
+/* Ajout / Edition de chapitres */
+
+.articleFormInput {
+    width: 99.8%;
+    height: 35px;
+    border: 1px solid rgb(143, 143, 157);
+    border-radius: 8px;
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: center;
+}
+
+#articleForm #title {
+    border: none;
+    width: 96%;
+    font-size: 0.95em;
+}
+
+div[class="tox tox-tinymce"] {
+    width: 100%;
+    border: 1px solid rgb(143, 143, 157);
 }
