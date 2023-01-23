@@ -5,6 +5,8 @@ namespace App\src\model;
 use App\config\Request;
 use App\config\Session;
 
+/* Class View, s'occupe de la gestion des vues */
+
 class View
 {
     private $file;

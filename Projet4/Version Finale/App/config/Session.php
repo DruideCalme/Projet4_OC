@@ -2,6 +2,8 @@
 
 namespace App\config;
 
+/* Class Session, gestion de la session utilisateur */
+
 class Session
 {
     private $session;

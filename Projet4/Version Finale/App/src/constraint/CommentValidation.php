@@ -4,6 +4,8 @@ namespace App\src\constraint;
 
 use App\config\Parameter;
 
+/* Class CommentValidation, contraintes de validation des commentaires postés */
+
 class CommentValidation extends Validation
 {
     public function checkField($name, $value)

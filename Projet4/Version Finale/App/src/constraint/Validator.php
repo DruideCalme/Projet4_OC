@@ -2,6 +2,8 @@
 
 namespace App\src\constraint;
 
+/* Class Validator, validation de données contenues dans $data, lance la vérification sur le type de données associé au $name */
+
 class Validator
 {
     public function validate($data, $name)

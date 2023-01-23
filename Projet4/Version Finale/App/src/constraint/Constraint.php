@@ -2,6 +2,8 @@
 
 namespace App\src\constraint;
 
+/* Class Constraint, contient les contraintes de l'application pour la validation des données */
+
 class Constraint
 {
     public function notBlank($name, $value)

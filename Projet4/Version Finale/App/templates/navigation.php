@@ -1,7 +1,7 @@
 <div class="navContainer">
     <nav>
         <ul class="navBlockA">
-            <li><a href="./index.php">Billet pour</br>l'alaska</a></li>
+            <li><a href="./index.php">Billet pour<br>l'alaska</a></li>
         </ul>
         <ul class="navBlockB">
             <li><a class="navLink" href="./index.php">ACCUEIL</a></li>

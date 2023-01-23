@@ -119,8 +119,9 @@ ul {
 }
 
 .homepageArticleImg {
-    background: url('../img/alaska-glacier.jpg');
+    background: url('../img/background.jpg');
     background-position-x: 50%;
+    background-position-y: 40%;
     height: 100%;
     width: 70%;
 }
@@ -154,7 +155,7 @@ ul {
     flex-direction: column;
 }
 
-.homepageArticleBlock-contentFlex span {
+.homepageArticleBlock-contentFlex .homepageOverview {
     overflow: hidden;
     max-height: 300px;
 }
@@ -389,7 +390,7 @@ a:hover .linkBorder {
     margin-top: 0;
 }
 
-.articleDscContent span {
+.articleDscContent .articleDscOverview {
     overflow: hidden;
 }
 
@@ -770,7 +771,7 @@ a:hover .linkBorder {
 
 #articleForm #title {
     border: none;
-    width: 96%;
+    width: 98%;
     font-size: 0.95em;
 }
 

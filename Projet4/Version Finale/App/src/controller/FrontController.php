@@ -4,6 +4,8 @@ namespace App\src\controller;
 
 use App\config\Parameter;
 
+/* Class FrontController, contrôleur qui gère la partie publique */
+
 class FrontController extends Controller
 
 {

@@ -2,6 +2,8 @@
 
 namespace App\src\controller;
 
+/* Class ErrorController, contrôleur qui gère les erreurs 404 et 500 */
+
 class ErrorController extends Controller
 
 {

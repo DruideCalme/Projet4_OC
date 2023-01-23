@@ -11,6 +11,8 @@ use App\src\model\View;
 use App\config\Request;
 use App\config\Session;
 
+/* Class Controller abstraite, généralisation de  l'usage des controlleurs */
+
 abstract class controller
 
 {

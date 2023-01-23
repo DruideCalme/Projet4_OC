@@ -2,6 +2,8 @@
 
 namespace App\src\model;
 
+/* Classe Article, représente un article du blog */
+
 class Article
 {
     private $id;

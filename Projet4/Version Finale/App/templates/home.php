@@ -19,9 +19,9 @@
                         <div class="homepageArticleTitle">
                             <h2><?= htmlspecialchars($lastArticle->getTitle());?></h2>
                         </div>
-                        <span class="homepageOverview">
+                        <div class="homepageOverview">
                             <?= $lastArticle->getContent()?>
-                        </span>
+                        </div>
                     </div>
                     <div class="homepageArticleLink">
                         <a href="../public/index.php?route=chapitre&articleId=<?=htmlspecialchars($lastArticle->getId());?>">
@@ -37,7 +37,7 @@
         <div class="homepageWhoAmI">
             <div class="homepageWhoAmIBlock">
                 <h2>A propos de moi</h2>
-                <img src="../public/img/j-forteroche.jpg">
+                <img src="../public/img/j-forteroche.jpg" alt="portrait de Jean Forteroche">
                 <p>Jean Forteroche fait partie de ceux qui changent les règles du jeu. Largement considéré comme le plus grand industriel du moment, il porte l'innovation à 
                     des niveaux rarement atteints.</p>
             </div>
@@ -45,10 +45,10 @@
         <div class="homepageSocialNetworks">
             <h2>Réseaux sociaux</h2>
             <div class="homepageSocialNetworksBlock">
-                <a href="https://www.facebook.com/" target="_blank"><img src="../public/img/facebook-icone.png"></a>
-                <a href="https://twitter.com/" target="_blank"><img src="../public/img/twitter-icone.png"></a>
-                <a href="https://linkedin.com/" target="_blank"><img src="../public/img/linkedin-icone.png"></a>
-                <a href="https://www.instagram.com/" target="_blank"><img src="../public/img/instagram-icone.png"></a>
+                <a href="https://www.facebook.com/" target="_blank"><img src="../public/img/facebook-icone.png" alt="icone facebook"></a>
+                <a href="https://twitter.com/" target="_blank"><img src="../public/img/twitter-icone.png" alt="icone twitter"></a>
+                <a href="https://linkedin.com/" target="_blank"><img src="../public/img/linkedin-icone.png" alt="icone linkedin"></a>
+                <a href="https://www.instagram.com/" target="_blank"><img src="../public/img/instagram-icone.png" alt="icone instagram"></a>
             </div>
         </div>
     </div>
@@ -64,11 +64,11 @@
             } else {
             ?>
                 <div class="lastComImg">
-                    <img src="../public/img/no-profile-picture.png">
+                    <img src="../public/img/no-profile-picture.png" alt="image d'utilisateur par défaut">
                 </div>
                 <div class="lastComContentBlock">
                     <p class="lastComName"><?=htmlspecialchars($lastComment->getPseudo());?></p>
-                    <p class="lastComContent"><?=$lastComment->getContent();?></p>
+                    <div class="lastComContent"><?=$lastComment->getContent();?></div>
                     <p class="lastComInfos">Chapitre <span class="chapterNum"><?=htmlspecialchars($lastComment->getArticleId());?></span> Le <span class="lastComDate"><?=htmlspecialchars($lastComment->getCreatedAt());?></span></p>
                 </div>
             <?php

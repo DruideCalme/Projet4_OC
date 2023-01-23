@@ -5,6 +5,8 @@ namespace App\src\DAO;
 use PDO;
 use Exception;
 
+/* Class DAO, gère la connexion à la base de données */
+
 abstract class DAO
 {
     private $connection;

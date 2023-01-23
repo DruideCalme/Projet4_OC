@@ -3,7 +3,7 @@
 <section id="pageBlock">
     <div class="espacePersoBlock">
         <?php
-        if ($this->session->getUserInfo('role') === 'admin') {
+        if ($this->session->getUserInfo('role') === 'Admin') {
             include 'admin_nav.php';
         } else {
             include 'user_nav.php';

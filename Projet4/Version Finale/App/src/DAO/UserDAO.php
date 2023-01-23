@@ -5,6 +5,8 @@ namespace App\src\DAO;
 use App\config\Parameter;
 use App\src\model\User;
 
+/* Class UserDAO, gère les accès base de donnée pour les comptes utilisateurs */
+
 class UserDAO extends DAO
 {
     private function buildObject($row)

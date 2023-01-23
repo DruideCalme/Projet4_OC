@@ -2,6 +2,8 @@
 
 namespace App\config;
 
+/* Class Request, gère la requête et les données POST, GET et SESSION */
+
 class Request
 {
     private $get;

@@ -2,6 +2,8 @@
 
 namespace App\config;
 
+/* Class Parameter, utilisation objet des superglobales GET, POST */
+
 class Parameter
 {
     private $parameter;

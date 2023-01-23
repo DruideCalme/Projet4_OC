@@ -4,6 +4,8 @@ namespace App\src\controller;
 
 use App\config\Parameter;
 
+/* Class BackController gère les fonctionnalités de l'espace d'administration */
+
 class BackController extends Controller
 {
     public function addArticle(Parameter $post)

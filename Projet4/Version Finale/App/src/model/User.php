@@ -2,6 +2,8 @@
 
 namespace App\src\model;
 
+/* Classe User, représente un utilisateur du blog */
+
 class User
 {
     private $id;

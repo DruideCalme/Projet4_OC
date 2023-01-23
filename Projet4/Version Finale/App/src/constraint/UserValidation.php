@@ -2,6 +2,8 @@
 
 namespace App\src\constraint;
 
+/* Class UserValidation, validation des données pour création de compte utilisateur */
+
 class UserValidation extends Validation
 {
     public function checkField($name, $value)

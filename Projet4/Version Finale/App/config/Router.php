@@ -7,6 +7,8 @@ use App\src\controller\BackController;
 use App\src\controller\ErrorController;
 use Exception;
 
+/* Class Router, gère les routes pour accéder aux vues */
+
 class Router
 
 {
@@ -86,7 +88,6 @@ class Router
                 $this->frontController->home();
             }
         }
-        
         catch (Exception $e)
         {
             $this->errorController->errorServer();

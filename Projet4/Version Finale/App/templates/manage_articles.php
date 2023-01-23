@@ -11,7 +11,7 @@
                 <h2>Gérer les chapitres</h2>
                 <div class="addArticleLink">
                     <a href="./index.php?route=addArticle">Publier un nouveau chapitre</a>
-                </div></br>
+                </div><br>
                 <ul>
                     <?php
                     if (!$articles) {

@@ -4,6 +4,8 @@ namespace App\src\DAO;
 
 use App\src\model\Comment;
 
+/* Class CommentDAO gère les opérations effectuées sur les commentaires. */
+
 class CommentDAO extends DAO
 {
     private function buildObject($row)

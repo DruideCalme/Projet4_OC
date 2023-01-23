@@ -4,6 +4,8 @@ namespace App\src\constraint;
 
 use App\config\Parameter;
 
+/* Class ArticleValidation, contraintes de validation des articles postés */
+
 class ArticleValidation extends Validation
 {
     public function checkField($name, $value)

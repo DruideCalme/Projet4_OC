@@ -4,6 +4,8 @@ namespace App\src\DAO;
 
 use App\src\model\Article;
 
+/* Class ArticleDAO gère les opérations effectuées sur les articles. */
+
 class ArticleDAO extends DAO
 {
     private function buildObject($row)

@@ -6,7 +6,7 @@
         height: 620px;
     }
 
-    .homepageArticleBlock-contentFlex span {
+    .homepageArticleBlock-contentFlex .homepageOverview {
         max-height: 378px;
     }
 
@@ -295,6 +295,10 @@
     }
 
     /* Espace Perso / Administration */
+    
+    .loginForm {
+        width: 100%;
+    }
 
     .espacePersoBlockInfo {
         padding: 0;
@@ -353,6 +357,12 @@
 
 @media screen and (max-width: 620px) {
 
+    /* Accueil */
+
+    .lastCom, .com {
+        width: 100%;
+    }
+
     /* Chapitres */
 
     .articleImg {
@@ -371,7 +381,15 @@
         height: 78%;
     }
 
+    .articleBlock {
+        width: 100%;
+    }
+
     /* Espace Perso / Administration */
+
+    .loginBlock, .registerBlock {
+        width: 100%;
+    }
 
     .espacePersoBlockNavMobile {
         height: 300px;
@@ -383,6 +401,18 @@
 
     .espacePersoBlockNavMobile div {
         width: 100%;
+    }
+
+    .comDate {
+        white-space: nowrap;
+    }
+
+    .articleFormInput {
+        width: 99%;
+    }
+
+    #articleForm #title {
+        width: 97%;
     }
 }
 

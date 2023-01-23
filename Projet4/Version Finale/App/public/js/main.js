@@ -5,6 +5,8 @@ let articleOverview = document.getElementsByClassName('articleDscOverview');
 let homepageOverview = document.getElementsByClassName('homepageOverview');
 let sessionInfos = document.getElementsByClassName('sessionInfos');
 
+/* Animation navigation mobile */
+
 function navDisplayOrHide(navBlock, navButton, pageBlock) {
     navBlock.classList.remove('navDisplay');
     navButton.addEventListener('click', function() {
@@ -17,6 +19,8 @@ function navDisplayOrHide(navBlock, navButton, pageBlock) {
         }
     });
 }
+
+/* Affichage des aperçus des billets */
 
 function showArticleOverview(articleContent, homepageArticleContent) {
     if (articleContent.length > 0) {

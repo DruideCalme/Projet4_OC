@@ -2,6 +2,8 @@
 
 namespace App\src\model;
 
+/* Classe Comment, représente un commentaire du blog */
+
 class Comment 
 {
     private $id;

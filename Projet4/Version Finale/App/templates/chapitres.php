@@ -12,7 +12,7 @@
             <div class="articleDsc">
                 <div class="articleDscContent">
                     <h2><?= htmlspecialchars($article->getTitle());?></h2>
-                    <span class="articleDscOverview"><?= $article->getContent();?></span>
+                    <div class="articleDscOverview"><?= $article->getContent();?></div>
                     <div class="articleDscLinkBlock">
                         <a class="articleDscLink" href="../public/index.php?route=chapitre&articleId=<?=htmlspecialchars($article->getId());?>">
                             <b>LIRE LA SUITE</b>
